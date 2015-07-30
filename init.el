@@ -32,6 +32,14 @@
 ;; Boston, MA 02110-1301, USA.
 
 ;;; Code:
+
+(add-to-list 'auto-mode-alist '("\\.jade\\'" . jade-mode))
+(add-hook 'jade-mode-hook
+	(lambda ()
+		(setq tab-width 8)
+		(setq jade-tab-width 8)))
+(add-hook 'clojure-mode-hook 'prettify-symbols-mode)
+
 (defvar current-user
       (getenv
        (if (equal system-type 'windows-nt) "USERNAME" "USER")))
@@ -132,4 +140,5 @@ by Prelude.")
  ;; greet the use with some useful tip
  (run-at-time 5 nil 'prelude-tip-of-the-day))
 
+(setq magit-auto-revert-mode nil)
 ;;; init.el ends here
