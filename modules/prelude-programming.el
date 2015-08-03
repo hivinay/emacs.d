@@ -67,13 +67,14 @@ This functions should be added to the hooks of major modes for programming."
 
 (defun prelude-prog-mode-defaults ()
   "Default coding hook, useful with any programming language."
-  (when (and (executable-find ispell-program-name)
-             prelude-flyspell)
-    (flyspell-prog-mode))
+  ;;(when (and (executable-find ispell-program-name)
+  ;;           prelude-flyspell)
+  ;;  (flyspell-prog-mode))
   (when prelude-guru
     (guru-mode +1))
   (smartparens-mode +1)
   (prelude-enable-whitespace)
+  (setq whitespace-line-column 400) ;; So it doesn't bother me
   (prelude-local-comment-auto-fill)
   (prelude-font-lock-comment-annotations))
 
