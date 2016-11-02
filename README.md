@@ -4,6 +4,8 @@
 Emacs Prelude
 =============
 
+**This is a fork of the Emacs Prelude project to adjust some configurations for my own use, and is no longer maintained as I do not regularly use Emacs anymore.**
+
 [![Join the chat at https://gitter.im/bbatsov/prelude](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bbatsov/prelude?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Prelude is an Emacs distribution that aims to enhance the default
